@@ -36,7 +36,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="bg-[#111] text-white overflow-hidden">
+    <main className="bg-[#111] text-white overflow-hidden relative">
+      {/* Background Glow */}
+      <div className="absolute top-1/4 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none" />
       {/* Breadcrumb Section */}
       <section className="bg-white/5 border-y border-white/10 py-4 px-3 mb-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
