@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Our Services | Yazhini Makeup Artist",
-  description: "Explore the wide range of professional makeup and styling services offered by Yazhini Makeup Artist, including bridal, event, fashion, and portfolio makeup.",
+  description:
+    "Explore the wide range of professional makeup and styling services offered by Yazhini Makeup Artist, including bridal, event, fashion, and portfolio makeup.",
 };
 
 export default function ServicesPage() {
@@ -131,27 +132,48 @@ export default function ServicesPage() {
       <div className="absolute bottom-[10%] left-[20%] w-[400px] h-[400px] bg-gold/5 blur-[100px] rounded-full pointer-events-none"></div>
 
       {/* Breadcrumb Header */}
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center border-b border-white/10 relative z-10">
-        <div className="text-sm font-poppins">
-          <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-            Home
-          </Link>
-          <span className="mx-2 text-gray-600">&gt;</span>
-          <span className="text-gold">Our Services</span>
+      <section className="bg-white/5 border-y border-white/10 py-4 px-3 mb-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <nav className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-gold transition-colors">
+              Home
+            </Link>
+            <span>›</span>
+            <span className="text-gold font-poppins">Services</span>
+          </nav>
+          <a
+            href="https://wa.me/919079540210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-2 border border-gold/50 text-gold text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300 font-poppins"
+          >
+            Connect on Whats app
+          </a>
         </div>
-        <button className="px-6 py-2 rounded-full border border-gold text-gold text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] hover:bg-gold hover:text-black transition-all">
-          Connect on WhatsApp
-        </button>
-      </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
         {/* Our Services Intro */}
         <div className="text-center mb-32">
           <h1 className="font-sedgwick text-4xl md:text-7xl mb-10">
-            <span className="text-gold">Our</span> <span className="text-white">Services</span>
+            <span className="text-gold">Our</span>{" "}
+            <span className="text-white">Services</span>
           </h1>
-          <p className="max-w-4xl mx-auto text-gray-300 leading-relaxed text-sm md:text-base mb-12 font-sans opacity-90">
-            At <span className="text-gold font-semibold italic">Yazhini Makeup Artist</span>, we take pride in offering a wide range of professional makeup and styling services tailored to meet the unique needs of our clients. Whether you're preparing for your wedding, a film shoot, a fashion event, or a party, our team of expert makeup artists is here to help you achieve a glamorous and stunning look. With years of experience and a commitment to excellence, we have become a trusted name in the beauty industry, serving clients in <span className="text-gold italic font-medium">Bangalore, Chennai, Coimbatore, and all over Tamil Nadu.</span>
+          <p className="max-w-7xl mx-auto text-gray-300 leading-relaxed text-sm md:text-sm mb-12 font-sans opacity-90">
+            At{" "}
+            <span className="text-gold font-semibold italic">
+              Yazhini Makeup Artist
+            </span>
+            , we take pride in offering a wide range of professional makeup and
+            styling services tailored to meet the unique needs of our clients.
+            Whether you're preparing for your wedding, a film shoot, a fashion
+            event, or a party, our team of expert makeup artists is here to help
+            you achieve a glamorous and stunning look. With years of experience
+            and a commitment to excellence, we have become a trusted name in the
+            beauty industry, serving clients in{" "}
+            <span className="text-gold italic font-medium">
+              Bangalore, Chennai, Coimbatore, and all over Tamil Nadu.
+            </span>
           </p>
           <button className="px-10 py-3.5 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-[0_0_20px_rgba(255,212,104,0.1)]">
             Book Now
@@ -159,34 +181,64 @@ export default function ServicesPage() {
         </div>
 
         {/* Our Specialized Services */}
-        <div className="mb-32">
-          <h2 className="font-sedgwick text-3xl md:text-5xl text-center mb-20">
-            <span className="text-gold">Our Specialized</span> <span className="text-white">Services</span>
+        <section className="mb-32">
+          <h2 className="font-sedgwick text-3xl md:text-5xl text-center mb-10">
+            <span className="text-gold">Our Specialized</span>{" "}
+            <span className="text-white">Services</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {specializedServices.map((service, index) => (
-              <div key={index} className="space-y-5 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-gold/20 transition-colors group">
-                <h3 className="text-gold font-bold text-lg flex items-center gap-2 group-hover:translate-x-1 transition-transform">
-                  <span className="text-xl">★</span> {service.title}:
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-sans">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+          <ul className="max-w-7xl mx-auto space-y-1">
+            <li className="text-gray-300 leading-relaxed text-sm md:text-md font-poppins flex items-start gap-4">
+              <span className="text-gold shrink-0">•</span>
+              <span>
+                <span className="text-gold font-bold">Expert Artists:</span> Our
+                team consists of highly skilled and professional makeup artists
+                with extensive experience in the beauty and entertainment
+                industry.
+              </span>
+            </li>
+            <li className="text-gray-300 leading-relaxed text-sm md:text-md font-poppins flex items-start gap-4">
+              <span className="text-gold shrink-0">•</span>
+              <span>
+                <span className="text-gold font-bold">
+                  Premium Quality Products:
+                </span>{" "}
+                We use only top-quality, hypoallergenic products to ensure a
+                flawless finish without any allergic reactions.
+              </span>
+            </li>
+            <li className="text-gray-300 leading-relaxed text-sm md:text-md font-poppins flex items-start gap-4">
+              <span className="text-gold shrink-0">•</span>
+              <span>
+                <span className="text-gold font-bold">Customized Looks:</span>{" "}
+                Every client is unique, and we create personalized makeup looks
+                that enhance your natural beauty and suit your preferences.
+              </span>
+            </li>
+            <li className="text-gray-300 leading-relaxed text-sm md:text-md font-poppins flex items-start gap-4">
+              <span className="text-gold shrink-0">•</span>
+              <span>
+                <span className="text-gold font-bold">Affordable Pricing:</span>{" "}
+                Our services are available at competitive prices, making luxury
+                makeup accessible to everyone.
+              </span>
+            </li>
+          </ul>
+        </section>
 
         {/* Detailed Services Section */}
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Left Column: Services */}
           <div className="w-full lg:w-2/3 space-y-20">
             <h2 className="font-sedgwick text-3xl md:text-5xl mb-16">
-              <span className="text-gold">Why Choose Our</span> <span className="text-white">Makeup Services?</span>
+              <span className="text-gold">Why Choose Our</span>{" "}
+              <span className="text-white">Makeup Services?</span>
             </h2>
 
             {services.map((service, index) => (
-              <div key={index} className="space-y-6 border-b border-white/10 pb-16 last:border-0">
+              <div
+                key={index}
+                className="space-y-6 border-b border-white/10 pb-16 last:border-0"
+              >
                 <h3 className="text-gold font-bold text-3xl md:text-4xl uppercase tracking-tighter font-cormorant italic">
                   {service.title}
                 </h3>
@@ -195,9 +247,16 @@ export default function ServicesPage() {
                 </p>
                 <ul className="space-y-3 mt-6">
                   {service.details.map((detail, idx) => (
-                    <li key={idx} className="text-gray-400 text-sm flex items-start gap-3 group">
-                      <span className="text-gold mt-1 group-hover:scale-125 transition-transform">•</span>
-                      <span className="group-hover:text-gray-200 transition-colors">{detail}</span>
+                    <li
+                      key={idx}
+                      className="text-gray-400 text-sm flex items-start gap-3 group"
+                    >
+                      <span className="text-gold mt-1 group-hover:scale-125 transition-transform">
+                        •
+                      </span>
+                      <span className="group-hover:text-gray-200 transition-colors">
+                        {detail}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -217,21 +276,30 @@ export default function ServicesPage() {
           <div className="w-full lg:w-1/3">
             <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 sticky top-32 backdrop-blur-sm">
               <h2 className="font-sedgwick text-3xl mb-10">
-                <span className="text-gold">Services</span> <span className="text-white">Offered At:</span>
+                <span className="text-gold">Services</span>{" "}
+                <span className="text-white">Offered At:</span>
               </h2>
               <p className="text-gray-400 text-sm mb-8 font-sans">
                 We are proud to offer our services in:
               </p>
               <ul className="space-y-4 mb-10">
                 {locations.map((loc, index) => (
-                  <li key={index} className="text-gray-300 text-sm flex items-center gap-3 group">
-                    <span className="text-gold text-lg group-hover:translate-x-1 transition-transform">▸</span> 
-                    <span className="group-hover:text-white transition-colors">{loc}</span>
+                  <li
+                    key={index}
+                    className="text-gray-300 text-sm flex items-center gap-3 group"
+                  >
+                    <span className="text-gold text-lg group-hover:translate-x-1 transition-transform">
+                      ▸
+                    </span>
+                    <span className="group-hover:text-white transition-colors">
+                      {loc}
+                    </span>
                   </li>
                 ))}
               </ul>
               <p className="text-gray-500 text-xs italic mb-10 leading-relaxed">
-                No matter where you are, our team is ready to bring our expertise to you.
+                No matter where you are, our team is ready to bring our
+                expertise to you.
               </p>
               <button className="w-full py-4 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-lg hover:shadow-gold/20">
                 Book Now
