@@ -68,6 +68,104 @@ export default function GalleryPage() {
       title: "Commercial Ad Shoot Makeup",
       category: "HD / Ad Shoot",
       description: "Natural-looking, clean-skin makeup style created for commercial media and print advertisements."
+    },
+    // {
+    //   src: "/assets/IMG-20260127-WA0147.jpg",
+    //   alt: "Radiant Engagement Glow",
+    //   title: "Radiant Engagement Glow",
+    //   category: "Event / Party",
+    //   description: "Soft radiant skin with a warm glow, perfectly suited for engagement ceremonies and ring celebrations."
+    // },
+    {
+      src: "/assets/IMG_20260301_084836.jpg",
+      alt: "Dreamy Pastel Bridal Look",
+      title: "Dreamy Pastel Bridal Look",
+      category: "Bridal",
+      description: "A soft, dreamy bridal look with pastel tones, dewy skin finish, and delicate eye detailing for the modern bride."
+    },
+    {
+      src: "/assets/IMG_20260301_085346.jpg",
+      alt: "Golden Hour Bridal Radiance",
+      title: "Golden Hour Bridal Radiance",
+      category: "Bridal",
+      description: "Sun-kissed golden tones with luminous highlighting, designed to capture the magic of golden hour photography."
+    },
+    {
+      src: "/assets/IMG_20260302_091922.jpg",
+      alt: "Regal South Indian Bride",
+      title: "Regal South Indian Bride",
+      category: "Bridal",
+      description: "A grand traditional look with rich jewel tones, bold lips, and perfectly lined eyes for the quintessential South Indian bride."
+    },
+    {
+      src: "/assets/IMG_20260307_110423.jpg",
+      alt: "Chic Cocktail Evening Glam",
+      title: "Chic Cocktail Evening Glam",
+      category: "Event / Party",
+      description: "Smokey eyes with a glossy lip finish, creating a glamorous statement look for cocktail nights and after-parties."
+    },
+    {
+      src: "/assets/IMG_20260307_125053.jpg",
+      alt: "Ethereal Editorial Beauty",
+      title: "Ethereal Editorial Beauty",
+      category: "Fashion / Editorial",
+      description: "An ethereal, high-fashion editorial look with artistic eye styling and flawless skin for magazine-worthy shoots."
+    },
+    {
+      src: "/assets/IMG_20260308_084718.jpg",
+      alt: "Classic Red Lip Bridal",
+      title: "Classic Red Lip Bridal",
+      category: "Bridal",
+      description: "Timeless bridal elegance with a bold red lip, winged liner, and perfectly sculpted brows for a statement look."
+    },
+    {
+      src: "/assets/IMG_20260501_180847.jpg",
+      alt: "Glamorous Reception Queen",
+      title: "Glamorous Reception Queen",
+      category: "Event / Party",
+      description: "Dazzling shimmer and rich pigments designed to make you the centre of attention at your wedding reception."
+    },
+    {
+      src: "/assets/IMG_20260504_064554.jpg",
+      alt: "Natural Beauty Editorial",
+      title: "Natural Beauty Editorial",
+      category: "Fashion / Editorial",
+      description: "A clean, minimal editorial look that celebrates natural beauty with barely-there makeup and flawless skin."
+    },
+    {
+      src: "/assets/IMG_20260506_200459.jpg",
+      alt: "Luxury HD Bridal Closeup",
+      title: "Luxury HD Bridal Closeup",
+      category: "HD / Ad Shoot",
+      description: "Ultra-HD camera-ready bridal makeup with seamless blending and micro-detail precision for cinematic shoots."
+    },
+    {
+      src: "/assets/IMG_20260514_141046.jpg",
+      alt: "Festive Haldi Ceremony Glow",
+      title: "Festive Haldi Ceremony Glow",
+      category: "Event / Party",
+      description: "Bright, fresh-faced makeup with warm undertones, perfect for the joyful and vibrant Haldi ceremony."
+    },
+    {
+      src: "/assets/IMG_20260517_093019.jpg",
+      alt: "Bold Avant-Garde Fashion",
+      title: "Bold Avant-Garde Fashion",
+      category: "Fashion / Editorial",
+      description: "A striking avant-garde look pushing creative boundaries with bold colours and artistic expression."
+    },
+    {
+      src: "/assets/IMG_20260517_093024.jpg",
+      alt: "Premium Studio Portrait",
+      title: "Premium Studio Portrait",
+      category: "HD / Ad Shoot",
+      description: "Studio-quality portrait makeup with meticulous skin detailing, perfect for professional headshots and portfolios."
+    },
+    {
+      src: "/assets/IMG_7351.JPG",
+      alt: "Subtle Elegance Makeover",
+      title: "Subtle Elegance Makeover",
+      category: "Bridal",
+      description: "An understated yet elegant bridal look with soft contouring, nude lips, and beautifully blended eye tones."
     }
   ];
 
@@ -88,7 +186,7 @@ export default function GalleryPage() {
   // Navigation handlers for Lightbox
   const handlePrev = useCallback(() => {
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex(prev => 
+      setSelectedImageIndex(prev =>
         prev === 0 ? filteredImages.length - 1 : prev - 1
       );
     }
@@ -96,7 +194,7 @@ export default function GalleryPage() {
 
   const handleNext = useCallback(() => {
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex(prev => 
+      setSelectedImageIndex(prev =>
         prev === filteredImages.length - 1 ? 0 : prev + 1
       );
     }
@@ -157,7 +255,7 @@ export default function GalleryPage() {
           >
             {/* WhatsApp Icon */}
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
             </svg>
             Connect on WhatsApp
           </a>
@@ -192,11 +290,10 @@ export default function GalleryPage() {
                 setActiveFilter(cat);
                 setSelectedImageIndex(null);
               }}
-              className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-poppins uppercase tracking-widest transition-all duration-300 cursor-pointer ${
-                activeFilter === cat
+              className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-poppins uppercase tracking-widest transition-all duration-300 cursor-pointer ${activeFilter === cat
                   ? "bg-gold text-black font-semibold shadow-[0_0_15px_rgba(255,212,104,0.3)]"
                   : "bg-white/5 text-gray-300 border border-white/5 hover:border-gold/30 hover:text-gold"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -206,10 +303,9 @@ export default function GalleryPage() {
 
       {/* Gallery Grid */}
       <section className="max-w-7xl mx-auto px-6 pb-24 relative z-10">
-        <div 
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 transition-opacity duration-700 ${
-            isMounted ? "opacity-100" : "opacity-0"
-          }`}
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 transition-opacity duration-700 ${isMounted ? "opacity-100" : "opacity-0"
+            }`}
         >
           {filteredImages.map((image, idx) => (
             <div
@@ -219,7 +315,7 @@ export default function GalleryPage() {
             >
               {/* Inner Luxury Frame Effect on Hover */}
               <div className="absolute inset-3 border border-gold/0 scale-95 z-20 pointer-events-none group-hover:border-gold/25 group-hover:scale-100 transition-all duration-500" />
-              
+
               {/* Image Container */}
               <div className="w-full h-full relative overflow-hidden">
                 <img
@@ -228,7 +324,7 @@ export default function GalleryPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="lazy"
                 />
-                
+
                 {/* Overlay Gradient Mask */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0b]/90 via-[#0b0b0b]/30 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 z-10" />
               </div>
@@ -292,12 +388,12 @@ export default function GalleryPage() {
       {/* Fullscreen Lightbox Modal */}
       {selectedImageIndex !== null && currentImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 p-4 sm:p-6 md:p-8">
-          
+
           {/* Close Area */}
           <div className="absolute inset-0 cursor-zoom-out" onClick={handleClose} />
 
           {/* Close Button */}
-          <button 
+          <button
             onClick={handleClose}
             className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
             aria-label="Close lightbox"
@@ -309,10 +405,10 @@ export default function GalleryPage() {
 
           {/* Lightbox Wrapper */}
           <div className="relative w-full max-w-6xl flex flex-col lg:flex-row items-stretch justify-center gap-6 z-40 bg-[#0f0f0f] border border-white/10 rounded-sm shadow-2xl overflow-hidden max-h-[90vh]">
-            
+
             {/* Visual Frame Section */}
             <div className="relative flex-grow flex items-center justify-center bg-[#070707] p-2 min-h-[40vh] lg:min-h-0 lg:w-[65%]">
-              
+
               {/* Prev Button */}
               <button
                 onClick={handlePrev}
@@ -352,7 +448,7 @@ export default function GalleryPage() {
 
             {/* Sidebar Details Section */}
             <div className="w-full lg:w-[35%] p-6 md:p-8 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-white/10 bg-[#0e0e0e] overflow-y-auto">
-              
+
               <div className="space-y-6">
                 <div>
                   <span className="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold text-[9px] uppercase tracking-widest font-semibold border border-gold/15 mb-3">
@@ -392,7 +488,7 @@ export default function GalleryPage() {
                   className="flex items-center justify-center gap-2.5 w-full py-3 bg-gold hover:bg-white text-black font-semibold text-xs uppercase tracking-widest rounded-sm transition-all duration-300 font-poppins shadow-md shadow-gold/15 hover:scale-[1.02]"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
                   </svg>
                   Inquire about this look
                 </a>
