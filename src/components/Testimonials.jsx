@@ -84,11 +84,10 @@ export default function Testimonials() {
                 key={i}
                 onClick={() => setActive(i)}
                 aria-label={`Testimonial ${i + 1}`}
-                className={`rounded-full transition-all duration-300 ${
-                  i === active
+                className={`rounded-full transition-all duration-300 ${i === active
                     ? "w-5 h-2 bg-gold"
                     : "w-2 h-2 bg-gold/30 hover:bg-gold/60"
-                }`}
+                  }`}
               />
             ))}
           </div>

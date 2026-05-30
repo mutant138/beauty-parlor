@@ -8,12 +8,12 @@ import rect15 from "@/assets/Rectangle 15.png";
 import rect16 from "@/assets/Rectangle 16.png";
 
 const services = [
-  { title: "Bridal Makeup",    img: rect11, featured: false },
-  { title: "Event Makeup",     img: rect12, featured: false },
-  { title: "Photo Makeup",     img: rect13, featured: false },
-  { title: "Fashion Makeup",   img: rect14, featured: true  },
-  { title: "HD Makeup",        img: rect15, featured: false },
-  { title: "Ad Shoot Makeup",  img: rect16, featured: false },
+  { title: "Bridal Makeup", img: rect11, featured: false },
+  { title: "Event Makeup", img: rect12, featured: false },
+  { title: "Photo Makeup", img: rect13, featured: false },
+  { title: "Fashion Makeup", img: rect14, featured: true },
+  { title: "HD Makeup", img: rect15, featured: false },
+  { title: "Ad Shoot Makeup", img: rect16, featured: false },
 ];
 
 export default function MakeupServices() {

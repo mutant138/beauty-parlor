@@ -3,15 +3,17 @@ export default function WhyChooseUs() {
     <section className="bg-[#111] py-20 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
 
-        {/* ── LEFT: nested rectangle decorative art ── */}
+        {/* ── LEFT: 4 overlapping squares/rectangles cross layout ── */}
         <div className="w-full lg:w-2/5 flex justify-center lg:justify-start shrink-0">
-          <div className="relative w-64 h-56 md:w-80 md:h-72">
-            {/* outer frame */}
-            <div className="absolute inset-0 border border-white/25" />
-            {/* mid frame — shifted bottom-right */}
-            <div className="absolute top-6 left-6 right-[-18px] bottom-[-18px] border border-white/15" />
-            {/* inner frame */}
-            <div className="absolute top-12 left-12 right-[-6px] bottom-[-6px] border border-white/10" />
+          <div className="relative w-[256px] h-[288px] md:w-[320px] md:h-[360px] shrink-0">
+            {/* Top Square */}
+            <div className="absolute top-0 left-[72px] w-[112px] h-[112px] md:left-[90px] md:w-[140px] md:h-[140px] border-2 border-white" />
+            {/* Bottom Square */}
+            <div className="absolute bottom-0 left-[72px] w-[112px] h-[112px] md:left-[90px] md:w-[140px] md:h-[140px] border-2 border-white" />
+            {/* Left Rectangle */}
+            <div className="absolute top-[64px] left-0 w-[128px] h-[160px] md:top-[80px] md:w-[160px] md:h-[200px] border-2 border-white" />
+            {/* Right Rectangle */}
+            <div className="absolute top-[64px] right-0 w-[128px] h-[160px] md:top-[80px] md:w-[160px] md:h-[200px] border-2 border-white" />
           </div>
         </div>
 

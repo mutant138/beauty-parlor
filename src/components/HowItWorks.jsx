@@ -53,9 +53,9 @@ export default function HowItWorks() {
                   className="opacity-90"
                 />
                 {/* Number badge */}
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gold text-black text-[10px] font-black font-poppins flex items-center justify-center">
+                {/* <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gold text-black text-[10px] font-black font-poppins flex items-center justify-center">
                   {s.step}
-                </span>
+                </span> */}
               </div>
 
               {/* Text */}

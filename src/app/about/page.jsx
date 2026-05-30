@@ -109,7 +109,7 @@ export default function AboutPage() {
           {/* Right Side - Image */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/about-image.jpg"
+              src="/assets/about-image.jpg"
               alt="Yazhini Makeup Artist"
               className="w-full max-w-md rounded-3xl object-cover shadow-2xl"
             />
