@@ -248,7 +248,7 @@ export default function GalleryPage() {
             <span className="text-gold font-poppins font-medium">Gallery</span>
           </nav>
           <a
-            href="https://wa.me/919079540210"
+            href="https://wa.me/917558160331"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 border border-gold/40 text-gold text-xs rounded-full hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 font-poppins uppercase tracking-wider font-semibold"
@@ -291,8 +291,8 @@ export default function GalleryPage() {
                 setSelectedImageIndex(null);
               }}
               className={`px-5 py-2 rounded-full text-[10px] md:text-xs font-poppins uppercase tracking-widest transition-all duration-300 cursor-pointer ${activeFilter === cat
-                  ? "bg-gold text-black font-semibold shadow-[0_0_15px_rgba(255,212,104,0.3)]"
-                  : "bg-white/5 text-gray-300 border border-white/5 hover:border-gold/30 hover:text-gold"
+                ? "bg-gold text-black font-semibold shadow-[0_0_15px_rgba(255,212,104,0.3)]"
+                : "bg-white/5 text-gray-300 border border-white/5 hover:border-gold/30 hover:text-gold"
                 }`}
             >
               {cat}
@@ -374,7 +374,7 @@ export default function GalleryPage() {
               Book an Appointment
             </Link>
             <a
-              href="https://wa.me/919079540210"
+              href="https://wa.me/917558160331"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border border-white/20 text-white text-xs font-semibold uppercase tracking-widest rounded-full hover:border-gold hover:text-gold transition-all duration-300 font-poppins"
@@ -482,7 +482,7 @@ export default function GalleryPage() {
               {/* Dynamic WhatsApp Inquiry Action */}
               <div className="pt-8 mt-6 border-t border-white/5">
                 <a
-                  href={`https://wa.me/919079540210?text=Hi!%20I%20saw%20the%20%22${encodeURIComponent(currentImage.title)}%22%20look%20in%20your%20gallery%20and%20would%20love%20to%20know%20more%20about%20your%20services%20and%20availability.`}
+                  href={`https://wa.me/917558160331?text=Hi!%20I%20saw%20the%20%22${encodeURIComponent(currentImage.title)}%22%20look%20in%20your%20gallery%20and%20would%20love%20to%20know%20more%20about%20your%20services%20and%20availability.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full py-3 bg-gold hover:bg-white text-black font-semibold text-xs uppercase tracking-widest rounded-sm transition-all duration-300 font-poppins shadow-md shadow-gold/15 hover:scale-[1.02]"

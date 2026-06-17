@@ -161,14 +161,14 @@ export default function CoursesPage() {
             <span className="text-gold font-poppins font-medium">Academy</span>
           </nav>
           <a
-            href="https://wa.me/919079540210"
+            href="https://wa.me/917558160331"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 border border-gold/40 text-gold text-xs rounded-full hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 font-poppins uppercase tracking-wider font-semibold"
           >
             {/* WhatsApp Icon */}
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
             </svg>
             Connect on WhatsApp
           </a>
@@ -197,8 +197,8 @@ export default function CoursesPage() {
       <section className="max-w-7xl mx-auto px-6 py-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {academyBenefits.map((benefit, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="p-6 bg-white/[0.02] border border-white/5 rounded-sm hover:border-gold/20 hover:bg-white/[0.04] transition-all duration-300 flex flex-col gap-3.5"
             >
               <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/15 flex items-center justify-center">
@@ -228,7 +228,7 @@ export default function CoursesPage() {
 
         <div className="flex flex-col gap-10">
           {courses.map((course) => (
-            <div 
+            <div
               key={course.id}
               className="group bg-[#121212] border border-white/5 rounded-sm overflow-hidden hover:border-gold/20 transition-all duration-500 shadow-xl"
             >
@@ -242,7 +242,7 @@ export default function CoursesPage() {
                     {course.title}
                   </h3>
                 </div>
-                
+
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-sm text-xs font-poppins text-gray-300">
                   <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -253,7 +253,7 @@ export default function CoursesPage() {
 
               {/* Main Content Layout */}
               <div className="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                
+
                 {/* Left Panel: Description and Key Benefits */}
                 <div className="lg:col-span-7 space-y-6">
                   <div>
@@ -289,26 +289,26 @@ export default function CoursesPage() {
 
                   <div className="space-y-3 mt-6">
                     <a
-                      href={`https://wa.me/919079540210?text=Hi!%20I'm%20interested%20in%20enrolling%20for%20the%20%22${encodeURIComponent(course.title)}%22%20course%20at%20your%20academy.%20Please%20share%20the%20fee%20structure%20and%20next%20batch%20dates.`}
+                      href={`https://wa.me/917558160331?text=Hi!%20I'm%20interested%20in%20enrolling%20for%20the%20%22${encodeURIComponent(course.title)}%22%20course%20at%20your%20academy.%20Please%20share%20the%20fee%20structure%20and%20next%20batch%20dates.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 w-full py-3 bg-gold hover:bg-white text-black font-semibold text-xs uppercase tracking-widest rounded-sm transition-all duration-300 font-poppins shadow-md shadow-gold/10"
                     >
                       <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"/>
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.988 3.3 1.49 4.793 1.491 5.485.002 9.947-4.46 9.95-9.95.001-2.658-1.034-5.158-2.91-7.037C16.598 1.78 14.093.75 11.435.75c-5.491 0-9.956 4.462-9.96 9.953-.002 1.8.48 3.565 1.393 5.118l-.96 3.51 3.6-.944.549.309zM18.64 14.64c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.785-1.07-.957-1.79-2.14-2-2.5-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63s-.81-1.95-1.11-2.67c-.3-.72-.6-0.63-.81-.63-.21-.006-.45-.006-.69-.006s-.63.09-.96.45c-.33.36-1.26 1.23-1.26 3.003 0 1.77 1.29 3.48 1.47 3.72.18.24 2.54 3.88 6.15 5.44 2.22.96 3.03.78 4.1.48 1.08-.3 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
                       </svg>
                       Inquire on WhatsApp
                     </a>
 
-                    <button 
+                    <button
                       onClick={() => toggleSyllabus(course.id)}
                       className="flex items-center justify-center gap-2 w-full py-3 bg-white/5 hover:bg-white/10 text-white font-medium text-xs uppercase tracking-widest rounded-sm border border-white/5 hover:border-white/10 transition-all duration-300 font-poppins cursor-pointer"
                     >
                       <span>{expandedCourse === course.id ? "Hide syllabus details" : "View course syllabus"}</span>
-                      <svg 
-                        className={`w-3.5 h-3.5 transform transition-transform duration-300 ${expandedCourse === course.id ? "rotate-180" : ""}`} 
-                        fill="none" 
-                        stroke="currentColor" 
+                      <svg
+                        className={`w-3.5 h-3.5 transform transition-transform duration-300 ${expandedCourse === course.id ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -321,12 +321,11 @@ export default function CoursesPage() {
               </div>
 
               {/* Collapsible Syllabus Modules */}
-              <div 
-                className={`transition-all duration-500 overflow-hidden ${
-                  expandedCourse === course.id 
-                    ? "max-h-[1000px] opacity-100 border-t border-white/5 bg-black/40" 
-                    : "max-h-0 opacity-0 pointer-events-none"
-                }`}
+              <div
+                className={`transition-all duration-500 overflow-hidden ${expandedCourse === course.id
+                  ? "max-h-[1000px] opacity-100 border-t border-white/5 bg-black/40"
+                  : "max-h-0 opacity-0 pointer-events-none"
+                  }`}
               >
                 <div className="p-6 md:p-8 space-y-6">
                   <h4 className="text-[10px] uppercase tracking-[0.15em] text-gold font-bold">Course Syllabus Modules</h4>
@@ -364,7 +363,7 @@ export default function CoursesPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/919079540210?text=Hi!%20I'd%20like%20to%20schedule%20a%20free%20counseling%20call%20to%20discuss%20makeup%20courses."
+              href="https://wa.me/917558160331?text=Hi!%20I'd%20like%20to%20schedule%20a%20free%20counseling%20call%20to%20discuss%20makeup%20courses."
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-gold text-black text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-all duration-300 font-poppins shadow-md shadow-gold/25"

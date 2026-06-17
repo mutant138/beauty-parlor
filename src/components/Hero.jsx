@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import hero1 from "@/assets/hero1.png";
 
@@ -43,7 +44,7 @@ export default function Hero() {
               <button className="px-5 py-2 rounded-full border-2 border-gold text-gold text-xs uppercase tracking-widest font-bold hover:bg-gold hover:text-black transition-colors duration-300">
                 Book Now
               </button>
-              <button className="px-5 py-2 rounded-full border-2 border-white text-white text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
+              <button onClick={() => window.open("https://wa.me/917558160331", "_blank")} className="px-5 py-2 rounded-full border-2 border-white text-white text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
                 Connect on Whatsapp
               </button>
             </div>

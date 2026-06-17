@@ -142,7 +142,7 @@ export default function ServicesPage() {
             <span className="text-gold font-poppins">Services</span>
           </nav>
           <a
-            href="https://wa.me/919079540210"
+            href="https://wa.me/917558160331"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 border border-gold/50 text-gold text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300 font-poppins"
