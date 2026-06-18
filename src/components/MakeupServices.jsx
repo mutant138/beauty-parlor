@@ -11,7 +11,7 @@ const services = [
   { title: "Bridal Makeup", img: rect11, featured: false },
   { title: "Event Makeup", img: rect12, featured: false },
   { title: "Photo Makeup", img: rect13, featured: false },
-  { title: "Fashion Makeup", img: rect14, featured: true },
+  { title: "Fashion Makeup", img: rect14, featured: false },
   { title: "HD Makeup", img: rect15, featured: false },
   { title: "Ad Shoot Makeup", img: rect16, featured: false },
 ];
