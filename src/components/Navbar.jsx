@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { name: "Home", href: "/" },
@@ -15,10 +16,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-1000 font-poppins">
+    <nav className="fixed top-0 left-0 right-0 z-[1000] font-poppins">
       {/* ── TOP INFO BAR: black bg, gold icons + text ── */}
-      <div className="bg-[#111] border-b border-gold/10 py-5">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-around gap-2 text-[11px] text-gold">
+      <div className="hidden sm:block bg-[#111] border-b border-gold/10 py-2 sm:py-3">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px] sm:text-xs text-gold">
           {/* Left: Address */}
           <div className="flex items-center gap-1.5">
             <svg
@@ -31,41 +32,68 @@ export default function Navbar() {
             <span className="hidden sm:inline">
               bus stop, 4th St, Thiru Nagar, Madurai, Tamil Nadu 625006
             </span>
-            <span className="sm:hidden">Chennai – 600078</span>
+            <span className="sm:hidden">Madurai - 625006</span>
           </div>
 
-          {/* Center: Phone */}
-          <div className="flex items-center gap-1.5">
-            <svg
-              className="w-3.5 h-3.5 shrink-0"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
-            </svg>
-            <span>+91 75581 60331</span>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+            {/* Center: Phone */}
+            <a href="tel:+917558160331" className="flex items-center gap-1.5 hover:underline transition-all">
+              <svg
+                className="w-3.5 h-3.5 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" />
+              </svg>
+              <span>+91 75581 60331</span>
+            </a>
 
-          {/* Right: Hours */}
-          <div className="flex items-center gap-1.5 font-poppins">
-            <svg
-              className="w-3.5 h-3.5 shrink-0"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm.5 11H11V7h1.5v5.25l3.25 1.94-.75 1.25L12.5 13z" />
-            </svg>
-            <span>Mon – Sat 10:00Am – 7:00PM</span>
+            {/* Right: Hours */}
+            <div className="flex items-center gap-1.5 font-poppins">
+              <svg
+                className="w-3.5 h-3.5 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm.5 11H11V7h1.5v5.25l3.25 1.94-.75 1.25L12.5 13z" />
+              </svg>
+              <span>Mon – Sat 10:00Am – 7:00PM</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ── MAIN NAV BAR: bright yellow bg, dark centered links ── */}
+      {/* ── MAIN NAV BAR: bright yellow bg, logo + links ── */}
       <div className="bg-gold">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-end relative">
-          {/* Mobile hamburger — left side */}
+        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between relative">
+          {/* Logo */}
+          <Link href="/" className="flex items-center z-10">
+            <Image
+              src="/assets/logo.png"
+              alt="Yazhini Logo"
+              width={160}
+              height={48}
+              className="h-11 sm:h-13 w-auto bg-black p-1.5 object-contain"
+            />
+          </Link>
+
+          {/* Desktop links — right aligned */}
+          <ul className="hidden md:flex items-center gap-8 lg:gap-12">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="text-[#111] font-bold text-sm tracking-wide uppercase hover:opacity-60 transition-opacity duration-200 whitespace-nowrap"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile hamburger — right side */}
           <button
-            className="md:hidden absolute left-4 focus:outline-none"
+            className="md:hidden z-20 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -81,20 +109,6 @@ export default function Navbar() {
               />
             </div>
           </button>
-
-          {/* Desktop links — centered */}
-          <ul className="hidden md:flex items-center gap-8 lg:gap-12 ">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="text-[#111] font-bold text-sm tracking-wide uppercase hover:opacity-60 transition-opacity duration-200 whitespace-nowrap"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 

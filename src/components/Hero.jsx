@@ -4,11 +4,11 @@ import hero1 from "@/assets/hero1.png";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#111] overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative w-full bg-[#111] overflow-hidden min-h-[80vh] md:min-h-[90vh] flex items-start md:items-center pt-6 md:pt-0">
       {/* Faint gold glow */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full relative z-10 py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full relative z-10 pt-4 pb-16 md:py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-6">
 
           {/* ── LEFT: Text ── */}
@@ -40,11 +40,16 @@ export default function Hero() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
-              <button className="px-5 py-2 rounded-full border-2 border-gold text-gold text-xs uppercase tracking-widest font-bold hover:bg-gold hover:text-black transition-colors duration-300">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a
+                href="https://wa.me/917558160331?text=Hi!%20I'd%20like%20to%20book%20an%20appointment%20for%20makeup%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto text-center px-5 py-2 rounded-full border-2 border-gold text-gold text-xs uppercase tracking-widest font-bold hover:bg-gold hover:text-black transition-colors duration-300"
+              >
                 Book Now
-              </button>
-              <button onClick={() => window.open("https://wa.me/917558160331", "_blank")} className="px-5 py-2 rounded-full border-2 border-white text-white text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
+              </a>
+              <button onClick={() => window.open("https://wa.me/917558160331", "_blank")} className="w-full sm:w-auto px-5 py-2 rounded-full border-2 border-white text-white text-xs uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
                 Connect on Whatsapp
               </button>
             </div>

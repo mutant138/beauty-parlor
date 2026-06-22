@@ -40,37 +40,37 @@ export default function AboutPage() {
       {/* Background Glow */}
       <div className="absolute top-1/4 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[120px] pointer-events-none" />
       {/* Breadcrumb Section */}
-      <section className="bg-white/5 border-y border-white/10 py-4 px-3 mb-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <nav className="flex items-center gap-2 text-sm text-gray-400">
+      <section className="bg-white/5 border-y border-white/10 py-3 px-4 mb-4 sm:mb-12">
+        <div className="max-w-7xl mx-auto flex flex-row justify-between items-center gap-4">
+          <nav className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
             <Link href="/" className="hover:text-gold transition-colors">
               Home
             </Link>
             <span>›</span>
-            <span className="text-gold">About</span>
+            <span className="text-gold font-poppins">About</span>
           </nav>
           <a
             href="https://wa.me/917558160331"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 border border-gold/50 text-gold text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300"
+            className="px-3 sm:px-6 py-1.5 sm:py-2 border border-gold/50 text-gold text-[10px] sm:text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300 font-poppins whitespace-nowrap"
           >
             Connect on WhatsApp
           </a>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 space-y-18 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-10 md:space-y-18 pb-16 md:pb-24">
         {/* About Us & Why Choose Sections */}
-        <section className="flex flex-col lg:flex-row items-center gap-12">
+        <section className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left Side - Text Content */}
-          <div className="flex-1 space-y-10 ">
-            <div className="space-y-6 font-poppins">
-              <h1 className="text-gold font-bold text-3xl tracking-tight">
+          <div className="flex-1 space-y-8">
+            <div className="space-y-4 font-poppins">
+              <h1 className="text-gold font-bold text-2xl sm:text-3xl tracking-tight text-left">
                 About Us
               </h1>
 
-              <p className="text-gray-300 leading-relaxed text-lg font-poppins">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg font-poppins text-left">
                 Welcome to{" "}
                 <span className="text-gold font-semibold">
                   Yazhini Makeup Artist
@@ -85,12 +85,12 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <h2 className="text-gold font-bold text-3xl tracking-tight">
+            <div className="space-y-4">
+              <h2 className="text-gold font-bold text-2xl sm:text-3xl tracking-tight text-left">
                 Why Choose Yazhini Makeup Artist?
               </h2>
 
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg text-left">
                 At Yazhini Makeup Artist, we pride ourselves on being a one-stop
                 solution for all your beauty needs. Our team of{" "}
                 <span className="text-gold font-semibold">
@@ -107,23 +107,23 @@ export default function AboutPage() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-center w-full">
             <img
               src="/assets/about-image.jpg"
               alt="Yazhini Makeup Artist"
-              className="w-full max-w-md rounded-3xl object-cover shadow-2xl"
+              className="w-full max-w-sm sm:max-w-md rounded-3xl object-cover shadow-2xl"
             />
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
+        <section className="grid grid-cols-3 gap-3 md:gap-12 py-6 md:py-12 border-t border-b border-white/5">
           {stats.map((stat, i) => (
-            <div key={i} className="text-center space-y-2">
-              <div className="text-gold text-5xl md:text-6xl font-sedgwick italic">
+            <div key={i} className="text-center space-y-1">
+              <div className="text-gold text-2xl sm:text-4xl md:text-6xl font-sedgwick italic">
                 {stat.number}
               </div>
-              <div className="text-gray-400 font-bold tracking-widest text-sm uppercase">
+              <div className="text-gray-400 font-bold tracking-widest text-[9px] sm:text-xs md:text-sm uppercase">
                 {stat.label}
               </div>
             </div>
@@ -131,17 +131,17 @@ export default function AboutPage() {
         </section>
 
         {/* Our Expertise Section */}
-        <section className="space-y-16">
+        <section className="space-y-10 md:space-y-16">
           <div className="text-center">
-            <h2 className="text-5xl md:text-7xl font-sedgwick text-gold mb-2">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-sedgwick text-gold mb-2">
               Our <span className="text-white">Expertise</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 md:gap-y-16">
             {expertise.map((item, i) => (
-              <div key={i} className="space-y-4">
-                <h3 className="text-gold font-bold text-xl">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+              <div key={i} className="space-y-2 text-left">
+                <h3 className="text-gold font-bold text-lg sm:text-xl">{item.title}</h3>
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -150,19 +150,19 @@ export default function AboutPage() {
         </section>
 
         {/* Makeup Products Section */}
-        <section className="text-center py-12">
-          <h2 className="text-5xl md:text-7xl font-sedgwick text-gold">
+        <section className="text-center py-6 md:py-12">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-sedgwick text-gold">
             Makeup products <span className="text-white">we use</span>
           </h2>
         </section>
 
         {/* Commitment, Approach, Visit Sections */}
-        <section className="space-y-16">
-          <div className="space-y-4">
-            <h3 className="text-gold font-bold text-2xl">
+        <section className="space-y-10 md:space-y-16">
+          <div className="space-y-2 text-left">
+            <h3 className="text-gold font-bold text-lg sm:text-xl md:text-2xl">
               Our Commitment to Quality
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed text-xs sm:text-sm">
               Your safety and satisfaction aren't just goals—they're our top
               priorities. We exclusively use high-quality, hypoallergenic
               products to ensure a flawless, long-lasting finish that is gentle
@@ -172,11 +172,11 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-gold font-bold text-2xl">
+          <div className="space-y-2 text-left">
+            <h3 className="text-gold font-bold text-lg sm:text-xl md:text-2xl">
               A Customer-Centric Approach
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed text-xs sm:text-sm">
               No two faces are the same, and neither are two visions. We pride
               ourselves on being listeners first and artists second. By focusing
               on your unique preferences and the fine details, we've built a
@@ -185,9 +185,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-gold font-bold text-2xl">Visit Us Today</h3>
-            <p className="text-gray-400 leading-relaxed">
+          <div className="space-y-2 text-left">
+            <h3 className="text-gold font-bold text-lg sm:text-xl md:text-2xl">Visit Us Today</h3>
+            <p className="text-gray-400 leading-relaxed text-xs sm:text-sm">
               Ready for your transformation? Experience the magic of
               professional makeup and hairstyling at Yazhini Makeup Artist.
               Whether it's a wedding, a gala, or a personal photoshoot, we're

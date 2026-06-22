@@ -18,7 +18,7 @@ const services = [
 
 export default function MakeupServices() {
   return (
-    <section className="bg-[#111] py-20 px-6 border-t border-white/5">
+    <section className="bg-[#111] py-12 md:py-20 px-6 border-t border-white/5">
       {/* ── Section intro ── */}
       <div className="max-w-3xl mx-auto text-center mb-14">
         <h2 className="font-cormorant italic text-white text-4xl md:text-5xl font-semibold mb-6">
@@ -38,7 +38,7 @@ export default function MakeupServices() {
       </div>
 
       {/* ── Cards grid ── */}
-      <div className="max-w-5xl mx-auto grid grid-cols-3 gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {services.map((svc, i) => (
           <div
             key={i}

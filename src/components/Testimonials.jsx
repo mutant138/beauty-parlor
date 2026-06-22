@@ -35,7 +35,7 @@ export default function Testimonials() {
     setActive((a) => (a === testimonials.length - 1 ? 0 : a + 1));
 
   return (
-    <section className="bg-[#0e0e0e] py-20 px-6 border-t border-white/5">
+    <section className="bg-[#0e0e0e] py-12 md:py-20 px-6 border-t border-white/5">
       <div className="max-w-3xl mx-auto text-center">
 
         {/* ── Heading ── */}

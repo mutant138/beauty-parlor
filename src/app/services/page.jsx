@@ -132,9 +132,9 @@ export default function ServicesPage() {
       <div className="absolute bottom-[10%] left-[20%] w-[400px] h-[400px] bg-gold/5 blur-[100px] rounded-full pointer-events-none"></div>
 
       {/* Breadcrumb Header */}
-      <section className="bg-white/5 border-y border-white/10 py-4 px-3 mb-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <nav className="flex items-center gap-2 text-sm text-gray-400">
+      <section className="bg-white/5 border-y border-white/10 py-3 px-4 mb-4 sm:mb-12">
+        <div className="max-w-7xl mx-auto flex flex-row justify-between items-center gap-4">
+          <nav className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
             <Link href="/" className="hover:text-gold transition-colors">
               Home
             </Link>
@@ -145,17 +145,17 @@ export default function ServicesPage() {
             href="https://wa.me/917558160331"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 border border-gold/50 text-gold text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300 font-poppins"
+            className="px-3 sm:px-6 py-1.5 sm:py-2 border border-gold/50 text-gold text-[10px] sm:text-xs rounded-full hover:bg-gold hover:text-black transition-all duration-300 font-poppins whitespace-nowrap"
           >
-            Connect on Whats app
+            Connect on WhatsApp
           </a>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 pt-0 sm:pt-4 pb-12 md:py-24 relative z-10">
         {/* Our Services Intro */}
-        <div className="text-center mb-32">
-          <h1 className="font-sedgwick text-4xl md:text-7xl mb-10">
+        <div className="text-center mb-8 md:mb-32">
+          <h1 className="font-sedgwick text-4xl md:text-7xl mb-6 md:mb-10">
             <span className="text-gold">Our</span>{" "}
             <span className="text-white">Services</span>
           </h1>
@@ -175,14 +175,19 @@ export default function ServicesPage() {
               Bangalore, Chennai, Coimbatore, and all over Tamil Nadu.
             </span>
           </p>
-          <button className="px-10 py-3.5 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-[0_0_20px_rgba(255,212,104,0.1)]">
+          <a
+            href="https://wa.me/917558160331?text=Hi!%20I'd%20like%20to%20book%20an%20appointment%20for%20makeup%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-10 py-3.5 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-[0_0_20px_rgba(255,212,104,0.1)]"
+          >
             Book Now
-          </button>
+          </a>
         </div>
 
         {/* Our Specialized Services */}
-        <section className="mb-32">
-          <h2 className="font-sedgwick text-3xl md:text-5xl text-center mb-10">
+        <section className="mb-10 md:mb-32">
+          <h2 className="font-sedgwick text-3xl md:text-5xl text-center mb-4 md:mb-10">
             <span className="text-gold">Our Specialized</span>{" "}
             <span className="text-white">Services</span>
           </h2>
@@ -226,10 +231,10 @@ export default function ServicesPage() {
         </section>
 
         {/* Detailed Services Section */}
-        <div className="flex flex-col lg:flex-row gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Left Column: Services */}
-          <div className="w-full lg:w-2/3 space-y-20">
-            <h2 className="font-sedgwick text-3xl md:text-5xl mb-16">
+          <div className="w-full lg:w-2/3 space-y-12 md:space-y-20">
+            <h2 className="font-sedgwick text-3xl md:text-5xl mb-8 md:mb-16">
               <span className="text-gold">Why Choose Our</span>{" "}
               <span className="text-white">Makeup Services?</span>
             </h2>
@@ -237,7 +242,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="space-y-6 border-b border-white/10 pb-16 last:border-0"
+                className="space-y-6 border-b border-white/10 pb-10 md:pb-16 last:border-0"
               >
                 <h3 className="text-gold font-bold text-3xl md:text-4xl uppercase tracking-tighter font-cormorant italic">
                   {service.title}
@@ -261,12 +266,14 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <div className="pt-6">
-                  <Link
-                    href="#"
+                  <a
+                    href={`https://wa.me/917558160331?text=Hi!%20I'd%20like%20to%20book%20an%20appointment%20for%20the%20%22${encodeURIComponent(service.title)}%22%20service.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-gold font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] border-b-2 border-gold/30 hover:border-gold transition-all pb-1"
                   >
                     Book Now <span className="text-lg">→</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -274,7 +281,7 @@ export default function ServicesPage() {
 
           {/* Right Column: Sidebar */}
           <div className="w-full lg:w-1/3">
-            <div className="bg-white/[0.03] p-10 rounded-3xl border border-white/10 sticky top-32 backdrop-blur-sm">
+            <div className="bg-white/[0.03] p-6 sm:p-10 rounded-3xl border border-white/10 sticky top-32 backdrop-blur-sm">
               <h2 className="font-sedgwick text-3xl mb-10">
                 <span className="text-gold">Services</span>{" "}
                 <span className="text-white">Offered At:</span>
@@ -301,9 +308,14 @@ export default function ServicesPage() {
                 No matter where you are, our team is ready to bring our
                 expertise to you.
               </p>
-              <button className="w-full py-4 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-lg hover:shadow-gold/20">
+              <a
+                href="https://wa.me/917558160331?text=Hi!%20I'd%20like%20to%20book%20an%20appointment%20for%20makeup%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full text-center py-4 rounded-full border-2 border-gold text-gold text-xs font-black uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-all shadow-lg hover:shadow-gold/20"
+              >
                 Book Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
