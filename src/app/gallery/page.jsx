@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GalleryPage() {
   const categories = ["All", "Bridal", "Event / Party", "Fashion / Editorial", "HD / Ad Shoot"];
@@ -159,19 +160,13 @@ export default function GalleryPage() {
       title: "Premium Studio Portrait",
       category: "HD / Ad Shoot",
       description: "Studio-quality portrait makeup with meticulous skin detailing, perfect for professional headshots and portfolios."
-    },
-    {
-      src: "/assets/IMG_7351.JPG",
-      alt: "Subtle Elegance Makeover",
-      title: "Subtle Elegance Makeover",
-      category: "Bridal",
-      description: "An understated yet elegant bridal look with soft contouring, nude lips, and beautifully blended eye tones."
     }
   ];
 
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [isMounted, setIsMounted] = useState(false);
+  const [loadedImages, setLoadedImages] = useState({});
 
   // Set mounted state to trigger entrance animations
   useEffect(() => {
@@ -308,19 +303,31 @@ export default function GalleryPage() {
             <div
               key={image.src}
               onClick={() => setSelectedImageIndex(idx)}
-              className="group relative cursor-pointer overflow-hidden rounded-sm border border-white/5 bg-[#141414] aspect-[4/5] shadow-lg hover:shadow-gold/5 hover:border-gold/20 transition-all duration-500"
+              className="group relative cursor-pointer overflow-hidden rounded-sm border border-white/5 bg-[#141414] aspect-[4/5] shadow-lg hover:shadow-gold/5 hover:border-gold/20 transition-all duration-500 transform-gpu"
+              style={{ contentVisibility: "auto", containIntrinsicSize: "auto 450px" }}
             >
               {/* Inner Luxury Frame Effect on Hover */}
               <div className="absolute inset-3 border border-gold/0 scale-95 z-20 pointer-events-none group-hover:border-gold/25 group-hover:scale-100 transition-all duration-500" />
 
               {/* Image Container */}
-              <div className="w-full h-full relative overflow-hidden">
-                <img
-                  src={image.src}
+              <div className="w-full h-full relative overflow-hidden bg-neutral-950">
+                <Image
+                  src={image.src.replace(/(\.jpg|\.jpeg|\.png|\.JPG)$/i, '_thumb$1')}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className={`object-cover group-hover:scale-105 transition-all duration-700 ease-out transform-gpu ${loadedImages[image.src] ? "blur-0 scale-100" : "blur-md scale-105 opacity-50"
+                    }`}
+                  priority={idx < 6}
+                  onLoad={() => setLoadedImages(prev => ({ ...prev, [image.src]: true }))}
                 />
+
+                {/* Loading Spinner Placeholder */}
+                {!loadedImages[image.src] && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-neutral-950 z-0">
+                    <div className="w-8 h-8 rounded-full border border-gold/10 border-t-gold animate-spin" />
+                  </div>
+                )}
 
                 {/* Overlay Gradient Mask */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0b]/90 via-[#0b0b0b]/30 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500 z-10" />
@@ -384,7 +391,7 @@ export default function GalleryPage() {
 
       {/* Fullscreen Lightbox Modal */}
       {selectedImageIndex !== null && currentImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 p-4 sm:p-6 md:p-8">
+        <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 p-4 sm:p-6 md:p-8">
 
           {/* Close Area */}
           <div className="absolute inset-0 cursor-zoom-out" onClick={handleClose} />
@@ -418,11 +425,14 @@ export default function GalleryPage() {
               </button>
 
               {/* Image Display */}
-              <div className="relative w-full h-full max-h-[50vh] lg:max-h-[80vh] flex items-center justify-center p-4">
-                <img
+              <div className="relative w-full h-[45vh] lg:h-[75vh] flex items-center justify-center">
+                <Image
                   src={currentImage.src}
                   alt={currentImage.alt}
-                  className="max-w-full max-h-[45vh] lg:max-h-[75vh] object-contain rounded-sm select-none border border-white/5"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 75vw"
+                  className="object-contain rounded-sm select-none"
+                  priority
                 />
               </div>
 

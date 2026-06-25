@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   const stats = [
@@ -108,11 +109,16 @@ export default function AboutPage() {
 
           {/* Right Side - Image */}
           <div className="flex-1 flex justify-center w-full">
-            <img
-              src="/assets/about-image.jpg"
-              alt="Yazhini Makeup Artist"
-              className="w-full max-w-sm sm:max-w-md rounded-3xl object-cover shadow-2xl"
-            />
+            <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/assets/about-image.jpg"
+                alt="Yazhini Makeup Artist"
+                fill
+                sizes="(max-width: 640px) 100vw, 450px"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </section>
 

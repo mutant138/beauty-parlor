@@ -57,7 +57,7 @@ export default function Hero() {
 
           {/* ── RIGHT: decorative nested rectangles + hero image ── */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
-            <div className="relative w-72 h-80 md:w-96 md:h-[420px]">
+            <div className="relative w-[330px] h-[380px] md:w-[420px] md:h-[480px] lg:w-[460px] lg:h-[520px]">
               {/* Largest outer frame */}
               <div className="absolute inset-0 border border-white/20 rounded-sm" />
               {/* Mid frame — offset top-left */}

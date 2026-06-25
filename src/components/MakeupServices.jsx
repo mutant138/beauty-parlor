@@ -114,7 +114,7 @@ export default function MakeupServices() {
                 <span className="text-gold text-[9px] uppercase tracking-[0.2em] font-semibold mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">
                   {svc.category}
                 </span>
-                
+
                 <h3 className="font-cormorant text-white text-xl sm:text-2xl font-bold leading-tight">
                   {svc.title}
                 </h3>
